@@ -20,7 +20,7 @@ const getItem = (data) => {
     const res = {};
     if (data.title) {
         res['glossary_id'] = {
-            S: data.title
+            S: data.title.toLocaleLowerCase()
         }
     }
     if (data.description) {
